@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Social Media</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="../js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">
+          <a href="../index.html">LOGO</a>
+        </div>
+        <div class="nav">
+          <a href="./post/create.html">Create Post</a>
+          <a href="../account/register.html">Register</a>
+          <a href="../account/login.html">Login</a>
+          <a href="../account/profile.html">Profile</a>
+        </div>
+      </div>
+
+      <form id="createPostForm">
+        <label for="title">Title</label>
+        <input type="text" name="title" required />
+      
+        <label for="body">Body</label>
+        <textarea name="body" required></textarea>
+      
+        <label for="mediaUrl">Media URL</label>
+        <input type="url" name="mediaUrl" />
+      
+        <button type="submit">Create Post</button>
+      </form>
+      
+      <p id="message"></p>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
+
+
+

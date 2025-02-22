@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Social Media</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="../js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo">
+          <a href="../index.html">LOGO</a>
+        </div>
+        <div class="nav">
+          <a href="../post/create.html">Create Post</a>
+          <a href="#">Register</a>
+          <a href="login.html">Login</a>
+          <a href="profile.html">Profile</a>
+        </div>
+      </div>
+
+      <div class="register-form">
+        <fieldset>
+          <h2>Create a New Account</h2>
+          <form id="register">
+            <div id="message"></div>
+
+            <input
+              type="text"
+              pattern="[A-Za-z0-9_]+"
+              name="name"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="text"
+              pattern="^[^@]+@(stud\.|)(noroff\.no)$"
+              name="email"
+              title="Please provide a noroff.no or stud.noroff.no email adress."
+              placeholder="Email"
+              required
+            />
+
+            <input
+              type="password"
+              name="password"
+              minlength="8"
+              placeholder="Password"
+              required
+            />
+
+            <input
+              type="password"
+              name="password_confirm"
+              minlength="8"
+              placeholder="Confirm Password"
+              required
+            />
+
+            <textarea
+              class="form-control"
+              id="bio"
+              placeholder="Write a short bio"
+              name="bio"
+              rows="3"
+            ></textarea>
+
+            <input
+              type="url"
+              placeholder="Avatar URL"
+              class="form-control"
+              id="avatarUrl"
+              name="avatarUrl"
+              aria-describedby="avatarUrlHelp"
+            />
+            <br />
+            <button type="submit" class="button">Register</button>
+            <div class="message"></div>
+          </form>
+
+          <p>Already have an account? <a href="./login.html">Login here</a></p>
+        </fieldset>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

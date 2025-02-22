@@ -1,0 +1,478 @@
+html {
+  font-size: 16px;
+  background-color: rgb(0, 3, 43);
+}
+
+.wrapper {
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header {
+  border: 5px solid #fff;
+  background-color: rgb(0, 3, 43);
+  display: flex;
+  padding: 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.login-form,
+.register-form {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 3, 43);
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+}
+
+.profile {
+  width: 30%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 500px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 auto;
+  line-height: 1.6;
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.post-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tags {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.created-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+#createPostForm,
+.register-form,
+.login-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#createPostForm h2,
+.register-form h2,
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+#createPostForm label,
+.register-form label,
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+#createPostForm input[type="text"],
+#createPostForm input[type="url"],
+#createPostForm textarea,
+.register-form input[type="text"],
+.register-form input[type="url"],
+.register-form textarea,
+.login-form input[type="text"],
+.login-form input[type="password"],
+.register-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+#createPostForm textarea,
+.register-form textarea,
+.login-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+#createPostForm button,
+.register-form button,
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-logout {
+  width: 100%;
+  padding: 12px;
+  background-color: #af4c4c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#createPostForm button:hover,
+.register-form button:hover,
+.login-form button:hover {
+  background-color: #45a049;
+}
+
+#message,
+.register-form #message,
+.login-form #message {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+#message.success,
+.register-form #message.success,
+.login-form #message.success {
+  color: #4caf50;
+}
+
+#message.error,
+.register-form #message.error,
+.login-form #message.error {
+  color: #f44336;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+#profile-details {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+#profile-details h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#profile-details .avatar {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 3px solid #4caf50;
+}
+
+#profile-details p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+#profile-details p.bio {
+  font-style: italic;
+  color: #777;
+  font-size: 14px;
+}
+
+#profile-details .edit-profile-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+#profile-details .edit-profile-btn:hover {
+  background-color: #45a049;
+}
+
+.post-container {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.post-container .post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.post-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.post-container .tags {
+  font-size: 1rem;
+  color: #777;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.post-container .tags span {
+  display: inline-block;
+  background-color: #e0e4e8;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: #666;
+  transition: background-color 0.3s;
+}
+
+.post-container .tags span:hover {
+  background-color: #5e6f8e;
+  color: white;
+}
+
+.post-container .author,
+.post-container .created-date {
+  font-size: 1rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+.post-container .author a {
+  color: #5e6f8e;
+  text-decoration: none;
+}
+
+.post-container .author a:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.page-button:hover {
+  background-color: #ddd;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+.pagination button:nth-child(n + 1):nth-child(-n + 3):not(.active):hover,
+.pagination button:nth-last-child(-n + 2):not(.active):hover {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.pagination button.prev,
+.pagination button.next {
+  font-weight: bold;
+}
+
+.pagination button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.search-container button {
+  padding: 12px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #45a049;
+}
