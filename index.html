@@ -3,35 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Posts - Social Media</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./js/script.js"></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="header">
-        <div class="logo">
-          <a href="index.html">LOGO</a>
-        </div>
+    <meta
+      name="description"
+      content="Log in to your Social account. Access your personalized feed, profile, and more. If you don't have an account, you can register to join the community."
+    />
 
-        <div class="nav">
-          <a href="./post/create.html">Create Post</a>
-          <a href="./account/register.html">Register</a>
-          <a href="./account/login.html">Login</a>
-          <a href="./account/profile.html">Profile</a>
+    <title>Home - Social</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" type="module"></script>
+  </head>
+  <body class="bg-gray-300 grid min-h-screen grid-rows-[auto,1fr,auto]">
+    <header></header>
+    <main>
+      <section class="p-4">
+        <div class="bg-white p-6 rounded shadow-md max-w-md mx-auto mt-12">
+          <h1 class="text-xl font-semibold mb-4 text-center">Log In</h1>
+          <form method="POST" id="login-form" class="flex flex-col gap-4">
+            <fieldset class="flex flex-col gap-4">
+              <div>
+                <label
+                  for="email"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Email:</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="password"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Password:</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div id="message" class="mx-auto w-full"></div>
+              <p>
+                If you don't have an account, you can register
+                <a
+                  href="./register.html"
+                  class="text-green-700 hover:text-green-800 hover:underline"
+                  >here</a
+                >.
+              </p>
+
+              <button
+                aria-label="Log In"
+                type="submit"
+                class="bg-green-700 text-white p-2 hover:bg-green-800 rounded"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
         </div>
-      </div>
-      <div class="search-container">
-        <input
-          type="text"
-          id="search-query"
-          placeholder="Search for posts..."
-        />
-        <button id="search-button">Search</button>
-      </div>
-      <div class="posts-container"></div>
-      <div class="pagination"></div>
-      <div class="footer"></div>
-    </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 p-3 text-white">
+      <p class="container mx-auto text-center">Copyright &copy; 2025</p>
+    </footer>
   </body>
 </html>

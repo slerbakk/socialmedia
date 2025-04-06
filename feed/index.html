@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join the community and stay updated with the latest posts from your friends. Share your thoughts, discover new content, and engage with others on our social feed platform."
+    />
+    <title>Feed - Social</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/script.js" type="module"></script>
+  </head>
+  <body class="bg-gray-200 grid min-h-screen grid-rows-[auto,1fr,auto] mx-auto">
+    <header></header>
+
+    <main>
+      <section>
+        <div class="container mx-auto mt-8 p-4">
+          <h1 class="text-3xl font-bold mb-4 text-center">
+            Welcome to the Feed
+          </h1>
+          <p class="mb-12 text-center">
+            Here you can see the latest posts from your friends.
+          </p>
+          <div
+            class="bg-white p-4 rounded shadow-md mb-12 mt-6 md:w-2/4 md:text-center mx-auto"
+          >
+            <h2 class="text-xl font-semibold mb-2 text-center">
+              Create a New Post
+            </h2>
+
+            <form method="POST" id="createPostForm">
+              <fieldset>
+                <label
+                  for="title"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Post title:
+                </label>
+                <input
+                  aria-label="Title for your post"
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Title"
+                  class="w-full p-2 border rounded mb-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+
+                <label
+                  for="post"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Post content:
+                </label>
+                <textarea
+                  aria-label="Write your post here"
+                  name="body"
+                  id="body"
+                  placeholder="Write your post here..."
+                  class="w-full p-2 border rounded mb-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                ></textarea>
+
+                <label
+                  for="mediaUrl"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Media URL (Optional):
+                </label>
+                <input
+                  aria-label="Media URL for your post"
+                  type="url"
+                  name="mediaUrl"
+                  id="mediaUrl"
+                  placeholder="Enter media URL (optional)"
+                  class="w-full p-2 border rounded mb-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+                <div id="message"></div>
+                <button
+                  aria-label="Create new post"
+                  type="submit"
+                  class="bg-green-700 hover:bg-green-800 text-white p-2 rounded w-full font-semibold mt-4"
+                >
+                  Post
+                </button>
+              </fieldset>
+            </form>
+          </div>
+          <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <input
+              aria-label="Search posts"
+              type="text"
+              placeholder="Search posts..."
+              class="p-2 border rounded w-full md:w-1/2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+            />
+            <select
+              aria-label="Select an Option"
+              class="p-2 border rounded w-full md:w-2/4 bg-white"
+            >
+              <option>Sort by Latest</option>
+              <option>Sort by Popularity</option>
+              <option>Sort by Following</option>
+            </select>
+          </div>
+          <div
+            id="post-container"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 p-3 text-white">
+      <p class="container mx-auto text-center">Copyright &copy; 2025</p>
+    </footer>
+  </body>
+</html>
