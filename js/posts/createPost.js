@@ -1,34 +1,26 @@
-import { baseUrl } from "../const/api.js";
-import { createPostHandler } from "../common/createPostHandler.js";
-// Endpoint for creating posts
-const postsEndpoint = "social/posts";
-const accessToken = localStorage.getItem("accessToken");
+import { baseUrl, postsUrl, API_KEY } from "../constants/api.js";
 
-// Function to create a post by calling the API
-export async function createPost(post) {
-  const url = `${baseUrl}${postsEndpoint}`; // Combine baseUrl and postsEndpoint
-
+export async function createPost(postData) {
+  const url = `${baseUrl}${postsUrl}`;
   const options = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${accessToken}`, // Use access token from localStorage
-      "X-Noroff-API-Key": "02673c1b-3f77-450d-8a96-91c6ecec2731", // API Key
+      Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
+      "X-Noroff-API-Key": API_KEY,
     },
-    body: JSON.stringify(post), // Convert the post object to JSON for the request
+    body: JSON.stringify(postData),
   };
 
   try {
     const response = await fetch(url, options);
-    const json = await response.json();
+    const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(json.errors?.[0]?.message || "Error creating post");
+      throw new Error(data.errors?.[0]?.message);
     }
-
-    return json; // Return the created post details
+    return data;
   } catch (error) {
-    console.error("Error creating post:", error);
     throw error;
   }
 }

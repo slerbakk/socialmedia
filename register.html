@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Create a new account on Social. Sign up to connect, share, and explore your personalized feed. Join the community today!"
+    />
+
+    <title>Register - Social</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" type="module"></script>
+  </head>
+  <body class="bg-gray-300 grid min-h-screen grid-rows-[auto,1fr,auto]">
+    <header></header>
+    <main>
+      <section class="p-4">
+        <div class="bg-white p-6 rounded shadow-md max-w-md mx-auto mt-12">
+          <h1 class="text-xl font-semibold mb-4 text-center">Register</h1>
+
+          <form
+            action="./"
+            method="POST"
+            class="flex flex-col gap-4"
+            id="register-form"
+          >
+            <fieldset class="flex flex-col gap-4">
+              <div>
+                <label
+                  for="username"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  maxlength="20"
+                  pattern="[A-Za-z0-9_]+"
+                  name="name"
+                  title="Please provide a username with only letters, numbers, and underscores."
+                  placeholder="Username"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  pattern="^[^@]+@(stud\.|)(noroff\.no)$"
+                  title="Please provide a noroff.no or stud.noroff.no email adress."
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  for="password"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  title="Please provide a password with at least 8 characters."
+                  required
+                  minlength="8"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="confirm-password"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  placeholder="Confirm Password"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div>
+                <label
+                  for="bio"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Your profile bio</label
+                >
+                <textarea
+                  name="bio"
+                  placeholder="Your profile bio"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                ></textarea>
+              </div>
+              <div>
+                <label
+                  for="avatar"
+                  class="sr-only block text-sm font-medium text-gray-700 mb-1"
+                  >Link to profile picture</label
+                >
+                <input
+                  type="url"
+                  name="avatarUrl"
+                  placeholder="Link to your profile picture"
+                  class="p-2 border rounded w-full focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+              </div>
+              <div id="message" class="mx-auto w-full"></div>
+              <p>
+                If you already have an account, you can log in
+                <a
+                  href="./index.html"
+                  class="text-green-700 hover:text-green-800 hover:underline"
+                  >here</a
+                >.
+              </p>
+
+              <button
+                aria-label="Register User"
+                type="submit"
+                class="bg-green-700 text-white p-2 hover:bg-green-800 rounded"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-800 p-3 text-white">
+      <p class="container mx-auto text-center">Copyright &copy; 2025</p>
+    </footer>
+  </body>
+</html>
